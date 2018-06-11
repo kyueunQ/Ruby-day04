@@ -1,0 +1,18 @@
+<h2>Webtoon<h2>
+
+<table>
+    <thead>
+        <th>이미지</th>
+        <th>제 목</th>
+        <th>링 크</th>
+    </thead>
+    <tbody>
+        <% @daum_webtoon.each do |toon| %>
+        <tr>
+            <td><img src="<%= toon["image"] %>"></td>
+            <td><%= toon["title"] %></td>
+            <td><a href="<%= toon["link"] %>">보러가기</a></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

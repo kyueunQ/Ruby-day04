@@ -1,0 +1,18 @@
+<table class="table table-hover">
+    <thead>
+        <th>글번호</th>
+        <th>이미지</th>
+        <th>제 목</th>
+        <th>링 크</th>
+    </thead>
+    <tbody>
+        <% @webtoons.each do |toon| %>
+        <tr>
+            <td><%= toon[0] %></td>
+            <td><img src="<%= toon[2] %>"></td>
+            <td><%= toon[1] %></td>
+            <td><a href="<%= toon[3] %>">보러가기</a></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
